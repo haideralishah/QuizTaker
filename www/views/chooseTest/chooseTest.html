@@ -1,0 +1,23 @@
+<ion-view view-title="Select Test" hide-back-button="true">
+  <ion-content class="mainbody">
+    <!--<div class="card" ng-repeat="topics in questionBank">
+      <div class="item item-text-wrap mainbody" ui-sref="testCondition({ partyID: $index })">
+        {{topics.nameOfTest}}
+      </div>
+    </div>-->
+    <!--<br>
+    <ul class="list" ng-repeat="topics in questionBank">
+      <li class="item mainbody">
+        {{topics.nameOfTest}}
+      </li>
+    </ul>-->
+    <br>
+    <ul class="list" ng-repeat="topics in questionBank" ui-sref="testCondition({ testID: $index })">
+      <li class="item mainbody">
+        <h2 class="fontForHeading">{{topics.nameOfTest}}</h2>
+      </li>
+    </ul>
+    <!--<h3 class="paddingForBody" ng-repeat="topics in questionBank" ui-sref="testCondition({ partyID: $index })"> {{topics.nameOfTest}}</h3>-->
+
+  </ion-content>
+</ion-view>

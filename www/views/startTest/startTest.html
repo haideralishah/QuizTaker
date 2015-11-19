@@ -1,0 +1,40 @@
+<ion-view view-title="Test" hide-back-button="false" class="mainbody">
+  <ion-content class="paddingForBodyofTest topMargin">
+
+
+    <!--StopWatch-->
+
+
+    <div id="display"></div>
+
+
+
+
+    <!--StopWatch-->
+
+
+    <h3 class="timer">Question: {{questionBank.QuiestionNo}}</h3>
+    <h5>{{questionBank.questionTitle}}</h5>
+    <p>{{questionBank.Question}}</p>
+      <div class="list">
+        <div class="item item-divider">
+          Selected Option: {{ selectedOpt.Opt.option }}
+        </div>
+        <ion-radio ng-repeat="option in options"
+                   ng-value="option"
+                   ng-model="selectedOpt.Opt"
+                   ng-change="optionChange(option)"
+                   name="SelectedOption">
+          {{ option.option }}
+        </ion-radio>
+      </div>
+    <div class="buttonForOath">
+      <button class="button button-block button-positive " ng-click="next()">
+        Next
+      </button>
+    </div>
+
+
+  </ion-content>
+
+</ion-view>

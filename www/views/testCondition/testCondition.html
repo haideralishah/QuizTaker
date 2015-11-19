@@ -1,0 +1,22 @@
+<ion-view view-title="Test Description" hide-back-button="false">
+  <ion-content class="mainbody">
+
+    <br><br>
+    <div class="">
+      <div class=" mainbody paddingForBody">
+        <h4 class="marginBottom3"><!--<b>Subject: </b>-->{{questionBank.nameOfTest}}</h4>
+        <p class="fontForPara marginBottom2">{{questionBank.testDescription}}</p>
+        <p class="fontForPara marginBottom4"><b>Total Time: </b>{{ questionBank.testTime}} Minute</p>
+      </div>
+    </div>
+
+
+    <div class="buttonForOath">
+      <button class="button button-block button-positive buttonInline" ng-click="login()" ui-sref="startTest({ startID: indexOfTest })">
+        Take Quiz
+      </button>
+    </div>
+
+
+  </ion-content>
+</ion-view>
